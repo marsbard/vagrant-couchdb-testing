@@ -16,8 +16,8 @@ Vagrant.configure("2") do |config|
 
 
     couchdb.vm.provision :puppet do |puppet|
-      #puppet.module_path = ["modules", "extmodules"]
-      #puppet.options = ["--verbose", "--debug"]
+      puppet.module_path = ["modules"]
+      puppet.options = ["--verbose", "--debug"]
     end
 
     couchdb.vm.network "forwarded_port", guest: 5984, host: 5984
