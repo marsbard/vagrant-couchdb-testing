@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
       #puppet.options = ["--verbose", "--debug"]
     end
 
-    couchdb.vm.network "forwarded_port", guest: 8080, host: 3080
+    couchdb.vm.network "forwarded_port", guest: 5984, host: 5984
 
   end
 
